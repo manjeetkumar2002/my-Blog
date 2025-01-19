@@ -164,7 +164,7 @@ const blogCards = [
   },
   {
     id: 17,
-    image: "Music1.jpg",
+    image: "./Music1.jpg",
     title: "The Evolution of Jazz Music",
     publishedDate: "2024-12-30",
     description:
@@ -175,7 +175,7 @@ const blogCards = [
   },
   {
     id: 18,
-    image: "Music2.jpg",
+    image: "./Music2.jpg",
     title: "The Healing Power of Classical Music",
     publishedDate: "2025-01-04",
     description:
@@ -186,7 +186,7 @@ const blogCards = [
   },
   {
     id: 19,
-    image: "Music3.jpg",
+    image: "./Music3.jpg",
     title: "The Rise of K-Pop: A Global Phenomenon",
     publishedDate: "2025-01-06",
     description:
@@ -197,7 +197,7 @@ const blogCards = [
   },
   {
     id: 20,
-    image: "Music4.jpg",
+    image: "./Music4.jpg",
     title: "Exploring the World of Electronic Music",
     publishedDate: "2025-01-02",
     description:
@@ -208,7 +208,7 @@ const blogCards = [
   },
   {
     id: 21,
-    image: "Music5.jpg",
+    image: "./Music5.jpg",
     title: "The Golden Era of Rock and Roll",
     publishedDate: "2024-12-28",
     description:
