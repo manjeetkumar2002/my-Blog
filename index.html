@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <!-- style sheet link -->
+    <link rel="stylesheet" href="./style.css">
+    <!--font awesome icons  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
+        integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <!-- header of the website -->
+    <header class="header-container">
+        <div class="header-content">
+            <div class="top-container">
+                <div class="top-content">
+                    <!-- logo -->
+                    <div class="logo-container"><a href="./index.html" class="logo">Zenith</a></div>
+                    <!-- navigations -->
+                    <nav class="navigation">
+                        <ul class="navs-list">
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="#Guide">Guide</a></li>
+                            <li><a href="#Newsletter">Newsletter</a></li>
+                            <li><a href="./contactUs.html">Contact</a></li>
+                            <button id="SignIn">SignUp</button>
+                        </ul>
+                    </nav>
+                    <!-- humburger-icon -->
+                    <div id="humbergerBtn" class="humburger-icon">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-container">
+                <div class="bottom-content">
+                    <div class="logo-container">
+                        <p class="logo">Blogs</p>
+                    </div>
+                    <div class="buttons">
+                        <button class="newpost-btn">New Post</button>
+                        <button id="noteBtn" class="note-btn">Notes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-container">
+            <div class="main-content">
+                <!-- This is for search bar ,categories , top post , instagram -->
+                <div class="left-content">
+                    <!-- Search Bar--------------------------->
+                    <div class="search-bar-container">
+                        <input type="text" id="search-bar" placeholder="Search...">
+                        <div class="icon-container">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                    <!-- categories--------------------------->
+                    <div class="categories">
+                        <div class="heading">
+                            <h2>Categories</h2>
+                        </div>
+                        <div class="categories-grid">
+                            <div class="category-box">
+                                <div class="category-name">Culture</div>
+                            </div>
+                            <div class="category-box">
+                                <div class="category-name">Creativity</div>
+                            </div>
+                            <div class="category-box">
+                                <div class="category-name">Technology</div>
+                            </div>
+                            <div class="category-box">
+                                <div class="category-name">Humor</div>
+                            </div>
+                            <div class="category-box">
+                                <div class="category-name">Music</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Top Post----------------------------->
+                    <div class="top-post-container">
+                        <div id="top-post-content" class="top-post-content">
+                            <!-- heading -->
+                            <div class="heading">
+                                <h2>Top Post</h2>
+                            </div>
+                            <!-- post -->
+                        </div>
+                    </div>
+                    <!-- Instragram -->
+                    <div class="Intagram-post-container">
+                        <div class="heading">
+                            <h2>Instagram</h2>
+                        </div>
+                        <div class="content">
+                            <img src="./Images/insta1.jpg" alt="" class="insta-img">
+                            <img src="./Images/insta2.jpg" alt="" class="insta-img">
+                            <img src="./Images/insta3.jpg" alt="" class="insta-img">
+                            <img src="./Images/insta4.jpg" alt="" class="insta-img">
+                            <img src="./Images/insta5.jpg" alt="" class="insta-img">
+                            <img src="./Images/insta6.jpg" alt="" class="insta-img">
+                        </div>
+                    </div>
+                </div>
+                <!-- This contain all the blog cards -->
+                <div class="right-content">
+                    <div class="blog-container">
+                        <h2 class="blog-heading">Recent blogs</h2>
+                        <div class="blog-content">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- This dialog for signin feature  -->
+    <div class="dialog-overlay hidden">
+        <div class="dialog-box">
+            <div class="dialog-content">
+            </div>
+        </div>
+    </div>
+    <!-- This dialog box for notes taking feature -->
+    <div class="notes-dialog-overlay hidden">
+        <div class="notes-dialog-box">
+            <div class="notes-dialog-content">
+                <h2 class="notes-heading">Notes</h2>
+                <p class="notes-desc">Write down your thoughts , ideas , notes down below.</p>
+                <div id="text-area" contenteditable="true" placeholder="Write your note here..."></div>
+
+                <div class="styling-component-container">
+                    <input type="color" id="colorPicker" title="Pick a color" value="#dc67ee">
+                    <button id="boldBtn"><i class="fa-solid fa-bold"></i></button>
+                    <button id="italicBtn"><i class="fa-solid fa-italic"></i></button>
+                    <button id="underlineBtn"><i class="fa-solid fa-underline"></i></button>
+                </div>
+                <p style="margin-top: 10px; font-size: 0.9rem; text-align: left;">
+                    Note :- select the text before applying the styling on it.
+                </p>
+                <div class="buttons-box">
+                    <button id="addBtn">Add Notes</button>
+                    <button id="close">close</button>
+                </div>
+                <div class="notes">
+                    <ul type="disc">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- Readmore dialog box for Blog card-->
+     <div class="modal-container" id="modal-container">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="left-container">
+                <div class="left-content">
+                    <div class="top-container">
+                        <div class="author-img">
+
+                        </div>
+                    </div>
+                    <div class="bottom-container">
+                        <h2 class="author-name"></h2>
+                        <div class="social-links">
+                            <a href="#twitter" class="link"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#insta" class="link"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#linkedin" class="link"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="#github" class="link"> <i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="right-content">
+                    <img src="image.jpg" alt="Image">
+                    <h2>Blog Title</h2>
+                    <p>Long Description</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- New post dialog box -->
+    <div class="new-post-dialog-overlay hidden">
+        <div class="dialog-box">
+            <div class="dialog-content">
+                <div class="newpost-guide">
+                    Notes:-Please fill all the details
+                </div>
+                <!-- container storing author img -->
+                <div class="first">
+                    <div class="author-img">
+                        <label for="author-img"><img src="./Images/camera.png" alt=""></label>
+                        <input style="display: none;" type="file" id="author-img" class="file-upload">
+                    </div>
+                    <div class="right">
+                        <div class="author-name">
+                            <input type="text" id="author-name" name="authorName" placeholder="Enter Name" value="">
+                        </div>
+                        <select class="catergory-select">
+                            <option  name="catergory" selected disabled>Choose Category</option>
+                            <option  name="catergory"value="Culture">Culture</option>
+                            <option name="catergory" value="Humor">Humor</option>
+                            <option  name="catergory"value="Creativity">Creativity</option>
+                            <option name="catergory" value="Technology">Technology</option>
+                            <option name="catergory" value="Music">Music</option>
+                        </select>
+                    </div>
+                    
+                </div>
+                <!-- Title input container -->
+                <div class="second">
+                    <input type="text" placeholder="Title Go here...." id="title" name="title">
+                </div>
+                <!-- description input container -->
+                <div class="third">
+                    <textarea  name="Description" id="Description" placeholder="Description Go here...."></textarea>
+                </div>
+                <!-- input image container  -->
+                <div class="forth">
+                    <input  type="file" id="blogImg" class="file-upload">
+                </div>
+                <div class="buttons">
+                    <button class="cancelBtn" id="cancelBtn">Cancel</button>
+                    <button class="postBtn" id="postBtn">Post</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Newsletter container -->
+    <div id="Newsletter" class="Newsletter-container">
+        <div class="content">
+          <div class="left">
+            <img src="./Images/Newsletter.png" alt="">
+          </div>
+          <div class="right">
+            <h1>Subscribe to <span>Our Newsletter</span></h1>
+            <p>Subscribe to our newsletter to be among the first to keep up with the lattest updates</p>
+            <div class="input-box">
+              <i class="fa-regular fa-envelope"></i>
+              <input type="email" placeholder="Your email">
+            </div>
+            <button>Newsletter</button>
+          </div>
+        </div>
+       
+      </div>
+    <!-- footer of the website-->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="left-container">
+                    <div class="left-content">
+                        <div class="logo">Zenith</div>
+                        <p>&copy; 2024 copyright reserved</p>
+                    </div>
+                </div>
+                <div class="right-container">
+                    <div class="right-content">
+                        <h1 class="heading">Contact us</h1>
+                        <p class="email-info">mkj22834@gmail.com</p>
+                        <p class="phoneNo">+91 8920265078</p>
+                        <div class="social-links">
+                            <a href="https://x.com/Manjeet02383889" class="link"><i
+                                    class="fa-brands fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/m_illustrations__/" class="link"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/manjeetkumar2002/" class="link"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                            <a href="#github" class="link"> <i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- javascript of website -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
