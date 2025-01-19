@@ -468,7 +468,7 @@ SignBtn.addEventListener("click", () => {
   container.className = "signIn-container";
   const leftBox = document.createElement("div");
   leftBox.className = "left";
-  leftBox.innerHTML += `<img src="./Images/signup.png" />`;
+  leftBox.innerHTML += `<img src="./signup.png" />`;
   const rightBox = document.createElement("form");
   rightBox.className = "right";
   // appending the container children
